@@ -31,7 +31,7 @@ const Countries = () => {
       const { confirmed, recovered, deaths, lastUpdate } = countryData;
       
       return (
-        <p>
+        <p style={{textAlign: "center"}}>
           Confirmed: {formatNumber(confirmed.value)}<br />
           Recovered: {formatNumber(recovered.value)}<br />
           Deaths: {formatNumber(deaths.value)}<br />
@@ -45,7 +45,7 @@ const Countries = () => {
 
   return (
     <Fragment>
-      <h1>Country Data</h1>
+      <h1 style={{textAlign: "center"}}>Country Data</h1>
       <Autocomplete
         id="country-list"
         style={{ width: 300 }}
@@ -54,7 +54,7 @@ const Countries = () => {
         onChange={(_e, value) => handleCountryChange(value)}
         autoHighlight
       />
-      <h2>Selected country : {selectedCountry}</h2>
+      <h2 style={{textAlign: "center"}}>Selected country : {selectedCountry}</h2>
       <DisplayCountryData />
     </Fragment>
   );

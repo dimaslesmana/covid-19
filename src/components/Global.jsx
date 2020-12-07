@@ -9,8 +9,8 @@ const Global = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 
   return (
     <Fragment>
-      <h1>Global Data</h1>
-      <p>
+      <h1 style={{textAlign: "center"}}>Global Data</h1>
+      <p style={{textAlign: "center"}}>
         Confirmed: {formatNumber(confirmed.value)}<br />
         Recovered: {formatNumber(recovered.value)}<br />
         Deaths: {formatNumber(deaths.value)}<br />
