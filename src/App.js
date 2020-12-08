@@ -6,6 +6,7 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { getData } from './api';
 import Global from './components/Global';
 import Countries from './components/Countries';
+import Clock from './components/Clock';
 
 import './App.css';
 
@@ -47,7 +48,9 @@ function App() {
         </Toolbar>
       </AppBar>
       <Container maxWidth="lg">
+        <Clock/>
         <Grid container direction="column" justify="center" alignItems="center">
+          
           <Grid item>
             <Global data={globalData}/>
           </Grid>
