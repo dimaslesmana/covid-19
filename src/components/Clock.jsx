@@ -7,7 +7,7 @@ class Clock extends Component {
 
     updateTime(){
         setInterval(() => {
-        this.setState({date: new Date})  
+        this.setState({date: new Date()})  
         },1000)
     }
     render(){
