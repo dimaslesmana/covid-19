@@ -29,6 +29,10 @@ function App() {
       }
   });
 
+  const handleThemeChange = () => {
+    setDarkMode(!darkMode);
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -42,15 +46,16 @@ function App() {
           </Typography>
           <Switch
           checked={darkMode}
-          onChange={() => setDarkMode(!darkMode)}
+          onChange={handleThemeChange}
           color="secondary"
           />
         </Toolbar>
       </AppBar>
-      <Container maxWidth="lg">
-        <Clock/>
+      <Container maxWidth="lg">        
         <Grid container direction="column" justify="center" alignItems="center">
-          
+          <Grid item>
+            <Clock />
+          </Grid>
           <Grid item>
             <Global data={globalData}/>
           </Grid>

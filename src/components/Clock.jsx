@@ -1,22 +1,30 @@
-import React,{Component} from"react";
+import React, { Component, Fragment } from 'react';
 
 class Clock extends Component {
-    state = {
-        date: new Date()
-    };
-
-    updateTime(){
-        setInterval(() => {
-        this.setState({date: new Date()})  
-        },1000)
+    constructor(props) {
+        super(props);
+        this.state = {
+            date: new Date()
+        };
     }
+
+    componentDidMount() {
+        this.timerID = setInterval(() => {
+            this.setState({
+                date: new Date()
+            });
+        }, 1000);
+    }
+    
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
     render(){
         return(
-            <div className="App">
-                {/* Clock */}
+            <Fragment>
                 <h3>{this.state.date.toLocaleTimeString()}</h3>
-                {this.updateTime()}
-            </div>
+            </Fragment>
         )
     }
 }
