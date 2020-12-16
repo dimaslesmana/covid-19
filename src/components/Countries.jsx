@@ -1,10 +1,10 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import Moment from 'react-moment';
+import CountUp from 'react-countup';
 import { TextField } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
 import { getData, getCountryList } from '../api';
-import { formatNumber } from '../formatNumber';
 
 const Countries = () => {
   const [countryList, setCountryList] = useState([]);
@@ -14,7 +14,7 @@ const Countries = () => {
   useEffect(() => {
     const fetchCountryList = async () => {
       setCountryList(await getCountryList());
-    }
+    };
 
     fetchCountryList();
   }, []);
@@ -31,12 +31,12 @@ const Countries = () => {
   const DisplayCountryData = () => {
     if (selectedCountry !== '-') {
       const { confirmed, recovered, deaths, lastUpdate } = countryData;
-      
+
       return (
-        <p style={{textAlign: "center"}}>
-          Confirmed: {formatNumber(confirmed.value)}<br />
-          Recovered: {formatNumber(recovered.value)}<br />
-          Deaths: {formatNumber(deaths.value)}<br />
+        <p style={{ textAlign: "center" }}>
+          Confirmed: <CountUp start={0} end={confirmed.value} duration={1} separator="." /><br />
+          Recovered: <CountUp start={0} end={recovered.value} duration={1} separator="." /><br />
+          Deaths: <CountUp start={0} end={deaths.value} duration={1} separator="." /><br />
           Last Update: <Moment date={lastUpdate} format="DD MMMM YYYY HH:mm" /><br />
         </p>
       );
@@ -47,7 +47,7 @@ const Countries = () => {
 
   return (
     <Fragment>
-      <h1 style={{textAlign: "center"}}>Country Data</h1>
+      <h1 style={{ textAlign: "center" }}>Country Data</h1>
       <Autocomplete
         id="country-list"
         style={{ width: 300 }}
@@ -56,7 +56,7 @@ const Countries = () => {
         onChange={(_e, value) => handleCountryChange(value)}
         autoHighlight
       />
-      <h2 style={{textAlign: "center"}}>Selected country : {selectedCountry}</h2>
+      <h2 style={{ textAlign: "center" }}>Selected country : {selectedCountry}</h2>
       <DisplayCountryData />
     </Fragment>
   );
