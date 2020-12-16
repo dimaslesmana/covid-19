@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import Moment from 'react-moment';
+
 import { formatNumber } from '../formatNumber';
 import Loading from './Loading';
 
@@ -14,7 +16,7 @@ const Global = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         Confirmed: {formatNumber(confirmed.value)}<br />
         Recovered: {formatNumber(recovered.value)}<br />
         Deaths: {formatNumber(deaths.value)}<br />
-        Last Update: {lastUpdate}<br />
+        Last Update: <Moment date={lastUpdate} format="DD MMMM YYYY HH:mm" /><br />
       </p>
     </Fragment>
   );

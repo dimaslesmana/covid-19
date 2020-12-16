@@ -1,6 +1,8 @@
 import React, { useEffect, useState, Fragment } from 'react';
+import Moment from 'react-moment';
 import { TextField } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
+
 import { getData, getCountryList } from '../api';
 import { formatNumber } from '../formatNumber';
 
@@ -35,7 +37,7 @@ const Countries = () => {
           Confirmed: {formatNumber(confirmed.value)}<br />
           Recovered: {formatNumber(recovered.value)}<br />
           Deaths: {formatNumber(deaths.value)}<br />
-          Last Update: {lastUpdate}<br />
+          Last Update: <Moment date={lastUpdate} format="DD MMMM YYYY HH:mm" /><br />
         </p>
       );
     } else {

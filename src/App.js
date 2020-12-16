@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Grid, AppBar, Toolbar, Switch, CssBaseline, IconButton, Typography } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { Container, Grid, CssBaseline } from '@material-ui/core';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import { getData } from './api';
 import Global from './components/Global';
 import Countries from './components/Countries';
 import Clock from './components/Clock';
+import Navs from './components/Navs';
 
 import './App.css';
 
 function App() {
   const [globalData, setGlobalData] = useState({});
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,8 +21,6 @@ function App() {
 
     fetchData();
   }, []);
-
-  const [darkMode, setDarkMode] = useState(false);
 
   const theme = createMuiTheme({
       palette: {
@@ -36,21 +35,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="static" color="primary">
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className="Title">
-            Covid-19 Statistics
-          </Typography>
-          <Switch
-          checked={darkMode}
-          onChange={handleThemeChange}
-          color="secondary"
-          />
-        </Toolbar>
-      </AppBar>
+      <Navs darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container maxWidth="lg">        
         <Grid container direction="column" justify="center" alignItems="center">
           <Grid item>
