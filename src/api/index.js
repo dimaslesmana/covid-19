@@ -51,7 +51,7 @@ export const getIndonesiaHarian = async () => {
 
 export const getIndonesiaProvinsi = async () => {
   try {
-    const { data } = await axios.get(`${INDONESIA_URL}/provinsi`);
+    const { data } = await axios.get(`${INDONESIA_URL}/provinsi/more`);
 
     return data;
   } catch (err) {

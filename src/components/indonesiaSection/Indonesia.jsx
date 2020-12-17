@@ -27,35 +27,16 @@ const Indonesia = () => {
 
     const { positif, dirawat, sembuh, meninggal, lastUpdate } = dataTotal;
     return (
-      /* <p style={{ textAlign: "center" }}>
-        Positif: <CountUp start={0} end={positif} duration={1} separator="." /><br />
-        Dirawat: <CountUp start={0} end={dirawat} duration={1} separator="." /><br />
-        Sembuh: <CountUp start={0} end={sembuh} duration={1} separator="." /><br />
-        Meninggal: <CountUp start={0} end={meninggal} duration={1} separator="." /><br />
-        Last Update: <Moment date={lastUpdate} format="DD MMMM YYYY HH:mm" /><br />
-      </p> */
       <Fragment>
         <Grid container spacing={2}>
           <Grid item sm={3} xs={12}>
             <Card className="Card">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Positif:
+                  Positif
                 </Typography>
-                <Typography>
-                <CountUp start={0} end={positif} duration={1} separator="." />
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item sm={3} xs={12}>
-            <Card className="Card">
-              <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Dirawat:
-                </Typography>
-                <Typography>
-                <CountUp start={0} end={dirawat} duration={1} separator="." />
+                <Typography variant="h6">
+                  <CountUp start={0} end={positif} duration={1} separator="." />
                 </Typography>
               </CardContent>
             </Card>
@@ -64,9 +45,21 @@ const Indonesia = () => {
             <Card className="Card">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Sembuh:
+                  Dirawat
                 </Typography>
-                <Typography>
+                <Typography variant="h6">
+                  <CountUp start={0} end={dirawat} duration={1} separator="." />
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item sm={3} xs={12}>
+            <Card className="Card">
+              <CardContent>
+                <Typography color="textSecondary" gutterBottom>
+                  Sembuh
+                </Typography>
+                <Typography variant="h6">
                   <CountUp start={0} end={sembuh} duration={1} separator="." />
                 </Typography>
               </CardContent>
@@ -76,9 +69,9 @@ const Indonesia = () => {
             <Card className="Card">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Meninggal:
+                  Meninggal
                 </Typography>
-                <Typography>
+                <Typography variant="h6">
                   <CountUp start={0} end={meninggal} duration={1} separator="." />
                 </Typography>
               </CardContent>
@@ -100,35 +93,15 @@ const Indonesia = () => {
     const { positif, dirawat, sembuh, meninggal, created } = dataPenambahan;
     return (
       <Fragment>
-        {/* <h2 style={{ textAlign: "center" }}>Penambahan Hari Ini</h2>
-        <p style={{ textAlign: "center" }}>
-          Positif: <CountUp start={0} end={positif} duration={1} separator="." /><br />
-          Dirawat: <CountUp start={0} end={dirawat} duration={1} separator="." /><br />
-          Sembuh: <CountUp start={0} end={sembuh} duration={1} separator="." /><br />
-          Meninggal: <CountUp start={0} end={meninggal} duration={1} separator="." /><br />
-          Last Update: <Moment date={created} format="DD MMMM YYYY HH:mm" /><br />
-        </p> */}
         <Grid container spacing={2}>
           <Grid item sm={3} xs={12}>
             <Card className="Card">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Positif:
+                  Positif
                 </Typography>
-                <Typography>
-                <CountUp start={0} end={positif} duration={1} separator="." />
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item sm={3} xs={12}>
-            <Card className="Card">
-              <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Dirawat:
-                </Typography>
-                <Typography>
-                <CountUp start={0} end={dirawat} duration={1} separator="." />
+                <Typography variant="h6">
+                  <CountUp start={0} end={positif} duration={1} separator="." />
                 </Typography>
               </CardContent>
             </Card>
@@ -137,9 +110,21 @@ const Indonesia = () => {
             <Card className="Card">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Sembuh:
+                  Dirawat
                 </Typography>
-                <Typography>
+                <Typography variant="h6">
+                  <CountUp start={0} end={dirawat} duration={1} separator="." />
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item sm={3} xs={12}>
+            <Card className="Card">
+              <CardContent>
+                <Typography color="textSecondary" gutterBottom>
+                  Sembuh
+                </Typography>
+                <Typography variant="h6">
                   <CountUp start={0} end={sembuh} duration={1} separator="." />
                 </Typography>
               </CardContent>
@@ -149,9 +134,9 @@ const Indonesia = () => {
             <Card className="Card">
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
-                  Meninggal:
+                  Meninggal
                 </Typography>
-                <Typography>
+                <Typography variant="h6">
                   <CountUp start={0} end={meninggal} duration={1} separator="." />
                 </Typography>
               </CardContent>

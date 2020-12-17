@@ -5,6 +5,7 @@ import { TextField, Typography, Grid, Card, CardContent } from '@material-ui/cor
 import { Autocomplete } from '@material-ui/lab';
 
 import { getData, getCountryList } from '../api';
+import Loading from './Loading';
 
 const Countries = () => {
   const [countryList, setCountryList] = useState([]);
@@ -18,6 +19,10 @@ const Countries = () => {
 
     fetchCountryList();
   }, []);
+
+  if (!countryList.length) {
+    return <Loading />
+  }
 
   const handleCountryChange = async (country) => {
     if (country) {
@@ -33,21 +38,15 @@ const Countries = () => {
       const { confirmed, recovered, deaths, lastUpdate } = countryData;
 
       return (
-        /* <p style={{ textAlign: "center" }}>
-          Confirmed: <CountUp start={0} end={confirmed.value} duration={1} separator="." /><br />
-          Recovered: <CountUp start={0} end={recovered.value} duration={1} separator="." /><br />
-          Deaths: <CountUp start={0} end={deaths.value} duration={1} separator="." /><br />
-          Last Update: <Moment date={lastUpdate} format="DD MMMM YYYY HH:mm" /><br />
-        </p> */
         <Fragment>
           <Grid container spacing={2}>
             <Grid item sm={4} xs={12}>
               <Card className="Card">
                 <CardContent className="Confirmed-Card">
                   <Typography color="textSecondary" gutterBottom>
-                    Confirmed:
+                    Confirmed
                   </Typography>
-                  <Typography>
+                  <Typography variant="h6">
                     <CountUp start={0} end={confirmed.value} duration={1} separator="." />
                   </Typography>
                 </CardContent>
@@ -57,10 +56,10 @@ const Countries = () => {
               <Card className="Card">
                 <CardContent className="Recovered-Card">
                   <Typography color="textSecondary" gutterBottom>
-                    Recovered:
+                    Recovered
                   </Typography>
-                  <Typography>
-                  <CountUp start={0} end={recovered.value} duration={1} separator="." />
+                  <Typography variant="h6">
+                    <CountUp start={0} end={recovered.value} duration={1} separator="." />
                   </Typography>
                 </CardContent>
               </Card>
@@ -69,9 +68,9 @@ const Countries = () => {
               <Card className="Card">
                 <CardContent className="Deaths-Card">
                   <Typography color="textSecondary" gutterBottom>
-                    Deaths:
+                    Deaths
                   </Typography>
-                  <Typography>
+                  <Typography variant="h6">
                     <CountUp start={0} end={deaths.value} duration={1} separator="." />
                   </Typography>
                 </CardContent>

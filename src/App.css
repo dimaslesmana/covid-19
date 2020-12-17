@@ -7,13 +7,13 @@
 }
 
 .Confirmed-Card {
-    background-color: #ffc107;
+    background-color: #FFA500;
 }
 
 .Recovered-Card {
-    background-color: #28a745;
+    background-color: #228B22;
 }
 
 .Deaths-Card {
-    background-color: #dc3545;
+    background-color: #DC143C;
 }
