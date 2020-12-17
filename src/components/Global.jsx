@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, CardContent, Grid, Typography } from '@material-ui/core';
 import Moment from 'react-moment';
 import CountUp from 'react-countup';
