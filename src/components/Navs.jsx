@@ -5,15 +5,15 @@ const Navs = ({ darkMode, handleThemeChange }) => {
   return (
     <AppBar position="static" color="primary">
       <Toolbar>
-        <Typography variant="h6" className="Title">
-          COVID-19 Statistics
-        </Typography>
-        <Button color="inherit" href="#">About Us</Button>
         <Switch
           checked={darkMode}
           onChange={() => handleThemeChange()}
           color="secondary"
         />
+        <Typography variant="h6" style={{textAlign: "center", flexGrow: 1, marginLeft: 24}}>
+          COVID-19 Statistics
+        </Typography>
+        <Button color="inherit" href="#">About Us</Button>
       </Toolbar>
     </AppBar>
   );

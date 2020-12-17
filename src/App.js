@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Grid, CssBaseline } from '@material-ui/core';
+import { Container, Box, Divider, CssBaseline } from '@material-ui/core';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import Global from './components/Global';
@@ -25,26 +25,23 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Navs darkMode={darkMode} handleThemeChange={handleThemeChange} />
-      <Container maxWidth="lg">
-        <Grid container direction="column" justify="center" alignItems="center">
-          <Grid item>
+        <CssBaseline />
+        <Navs darkMode={darkMode} handleThemeChange={handleThemeChange} />
+        <Container maxWidth="lg">
+          <Box textAlign="center">
             <Clock />
-          </Grid>
-          <Grid item>
+            <Divider />
             <Global />
-          </Grid>
-          <Grid item>
+            <Divider />
             <Countries />
-          </Grid>
-          <Grid item>
+            <Divider />
             <Indonesia />
+            <Divider />
             <Provinsi />
-          </Grid>
-          <DailyData />
-        </Grid>
-      </Container>
+            <Divider />
+            <DailyData />
+          </Box>
+        </Container>
     </ThemeProvider>
   );
 }
