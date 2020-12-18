@@ -1,7 +1,9 @@
 import React, { useEffect, useState, Fragment } from 'react';
-import { withStyles, makeStyles,  Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import { withStyles, makeStyles, Paper, Box, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Tabs, Tab } from '@material-ui/core';
 
 import { getIndonesiaProvinsi } from '../../api';
+import { ProvinsiChart } from './Charts';
 import Loading from '../Loading';
 
 const columns = [
@@ -40,11 +42,14 @@ const StyledTableCell = withStyles((theme) => ({
 }))(TableCell);
 
 const useStyles = makeStyles({
-  root: {
-    width: '100%',
+  TableRoot: {
+    width: '100%'
+  },
+  TabsRoot: {
+    flexGrow: 1
   },
   container: {
-    maxHeight: 440,
+    maxHeight: 440
   },
 });
 
@@ -53,6 +58,7 @@ const Provinsi = () => {
   const [dataProvinsi, setDataProvinsi] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [value, setValue] = useState(0);
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -71,14 +77,17 @@ const Provinsi = () => {
     setPage(0);
   };
 
+  const handleChange = (_e, newValue) => {
+    setValue(newValue);
+  };
+
   if (!dataProvinsi.length) {
     return <Loading />
   }
 
-  return (
-    <Fragment>
-      <h2 style={{ textAlign: "center" }}>Data Provinsi</h2>
-      <Paper className={classes.root}>
+  const DisplayTable = () => {
+    return (
+      <Paper className={classes.TableRoot}>
         <TableContainer className={classes.container}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
@@ -125,6 +134,49 @@ const Provinsi = () => {
           onChangeRowsPerPage={handleChangeRowsPerPage}
         />
       </Paper>
+    );
+  };
+
+  const TabPanel = ({ children, value, index, ...other }) => {
+    return (
+      <div role="tabpanel" hidden={value !== index} id={`provinsi-tabpanel-${index}`}aria-labelledby={`provinsi-tab-${index}`}{...other}>
+        {value === index && (
+          <Box p={2}>
+            {children}
+          </Box>
+        )}
+      </div>
+    );
+  };
+
+  TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.any.isRequired,
+    value: PropTypes.any.isRequired,
+  };
+
+  const a11yProps = (index) => {
+    return {
+      id: `provinsi-tab-${index}`,
+      'aria-controls': `provinsi-tabpanel-${index}`
+    };
+  };
+
+  return (
+    <Fragment>
+      <h2 style={{ textAlign: "center" }}>Data Provinsi</h2>
+      <Paper className={classes.TabsRoot}>
+        <Tabs value={value} onChange={handleChange} indicatorColor="primary" textColor="inherit" centered>
+          <Tab label="Lihat Table" {...a11yProps(0)} />
+          <Tab label="Lihat Chart" {...a11yProps(1)} />
+        </Tabs>
+      </Paper>
+      <TabPanel value={value} index={0}>
+        <DisplayTable />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <ProvinsiChart dataProvinsi={dataProvinsi} />
+      </TabPanel>
     </Fragment>
   );
 };
