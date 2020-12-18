@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import { Typography } from '@material-ui/core';
 import Moment from 'react-moment';
 
 class Clock extends Component {
@@ -23,9 +24,12 @@ class Clock extends Component {
 
   render() {
     return (
-      <Fragment>
-        <h3><Moment date={this.state.date} format="DD MMMM YYYY HH:mm:ss" /></h3>
-      </Fragment>
+      <div className="Root">
+        <Typography variant="h4" gutterBottom>Current Time</Typography>
+        <Typography variant="body1">
+          <Moment date={this.state.date} format="DD MMMM YYYY HH:mm:ss" />
+        </Typography>
+      </div>
     )
   }
 }
