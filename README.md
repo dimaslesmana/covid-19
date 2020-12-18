@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# COVID-19 Statistics 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Live Demo: [https://covid19-jeruk.vercel.app/](https://covid19-jeruk.vercel.app/)
 
-## Available Scripts
+Website ini dibuat dengan menggunakan [React](https://github.com/facebook/create-react-app) & [Material-UI](https://material-ui.com/).\
+Data COVID-19 pada website ini berasal dari API:
+- [https://github.com/mathdroid/covid-19-api](https://github.com/mathdroid/covid-19-api)
+- [https://github.com/Reynadi531/api-covid19-indonesia-v2](https://github.com/Reynadi531/api-covid19-indonesia-v2)
 
-In the project directory, you can run:
+## Quick Start Guide
+
+Sebelum menjalankan web server pada project ini,\
+siilakan buka folder ini dengan menggunakan **CMD**,\
+dan lakukan instalasi module-module yang diperlukan dengan menjalankan perintah:
+
+### `npm install`
+
+atau bisa juga dengan menjalankan file **INSTALL.bat**.
+***
+Untuk menjalankan website menggunakan web server,\
+silakan buka folder project ini dengan menggunakan **CMD** dan jalankan perintah di bawah ini:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+atau bisa juga dengan menjalankan file **START.bat**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Kemudian buka link [http://localhost:3000](http://localhost:3000) di browser jika memang tidak terbuka secara otomatis.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Kelompok Jeruk
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Anggota
+- **Christian Andreas Siagian** - *(00000038106)* | **[GitHub](https://github.com/christiansiagiann)**
+- **Dimas Lesmana** - *(00000041281)* | **[GitHub](https://github.com/dimaslesmana)**
+- **Fahmi Ihsan** - *(00000041084)* | **[GitHub](https://github.com/fahmiihsan00)**
+- **Muhammad Akmal Hisyam** - *(00000040027)* | **[GitHub](https://github.com/akmalhisyammm)**
