@@ -10,7 +10,7 @@ Data COVID-19 pada website ini berasal dari API:
 ## Quick Start Guide
 
 Sebelum menjalankan web server pada project ini,\
-siilakan buka folder project ini dengan menggunakan **CMD**,\
+silakan buka folder project ini dengan menggunakan **CMD**,\
 dan lakukan instalasi module-module yang diperlukan dengan menjalankan perintah:
 
 ### `npm install`
