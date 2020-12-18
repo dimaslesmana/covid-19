@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Switch, Typography, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const Navs = ({ darkMode, handleThemeChange }) => {
   return (
@@ -13,8 +14,8 @@ const Navs = ({ darkMode, handleThemeChange }) => {
         <Typography variant="h6" style={{flexGrow: 1}}>
           COVID-19 Statistics
         </Typography>
-        <Button color="inherit" href="/">HOME</Button>
-        <Button color="inherit" href="/aboutus">ABOUT US</Button>
+        <Link style={{ textDecoration: 'none' }}  to="/"><Button style={{color: 'white'}}>HOME</Button></Link>
+        <Link style={{ textDecoration: 'none' }}  to="/aboutus"><Button style={{color: 'white'}} >ABOUT US</Button></Link>
       </Toolbar>
     </AppBar>
   );
