@@ -9,6 +9,7 @@ import { Indonesia, Provinsi, DailyData } from './components/indonesiaSection';
 import Clock from './components/Clock';
 import Navs from './components/Navs';
 import AboutUs from './components/aboutUs/AboutUs';
+import Footer from "./components/footer/Footer";
 
 import './App.css';
 
@@ -26,6 +27,7 @@ function App() {
   }
 
   return (
+    <div>
     <ThemeProvider theme={theme}>
         <CssBaseline />
         <Navs darkMode={darkMode} handleThemeChange={handleThemeChange} />
@@ -55,7 +57,13 @@ function App() {
             </Router>
           </Box>
         </Container>
+        
+        
+        
     </ThemeProvider>
+    <Footer />
+    </div>
+    
   );
 }
 
