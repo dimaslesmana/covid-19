@@ -6,7 +6,7 @@ const Footer = () => {
     <Fragment>
       <div className="Sub-Footer">
         <Typography variant="h6">
-          Repo GitHub
+          GitHub Repository
         </Typography>
         <Typography variant="subtitle1">
           <a href="https://github.com/dimaslesmana/covid-19" target="_blank" rel="noreferrer">https://github.com/dimaslesmana/covid-19</a>
