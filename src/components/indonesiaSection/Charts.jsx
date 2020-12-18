@@ -1,7 +1,7 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
 import moment from 'moment';
-import { TextField, Grid } from '@material-ui/core';
+import { TextField, Grid, Typography } from '@material-ui/core';
 import { Autocomplete } from '@material-ui/lab';
 
 import { getIndonesiaHarian } from '../../api';
@@ -49,10 +49,10 @@ export const DailyData = () => {
   };
 
   return (
-    <Fragment>
-      <h2 style={{ textAlign: "center" }}>Grafik</h2>
+    <div className="Root">
+      <Typography variant="h4" gutterBottom>Grafik Indonesia Harian</Typography>
       <Line data={data} />
-    </Fragment>
+    </div>
   );
 };
 

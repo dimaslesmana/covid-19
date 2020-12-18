@@ -1,6 +1,6 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, makeStyles, Paper, Box, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Tabs, Tab } from '@material-ui/core';
+import { withStyles, makeStyles, Paper, Box, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Tabs, Tab, Typography } from '@material-ui/core';
 
 import { getIndonesiaProvinsi } from '../../api';
 import { ProvinsiChart } from './Charts';
@@ -163,8 +163,8 @@ const Provinsi = () => {
   };
 
   return (
-    <Fragment>
-      <h2 style={{ textAlign: "center" }}>Data Provinsi</h2>
+    <div className="Root">
+      <Typography variant="h4" gutterBottom>Data Provinsi</Typography>
       <Paper className={classes.TabsRoot}>
         <Tabs value={value} onChange={handleChange} indicatorColor="primary" textColor="inherit" centered>
           <Tab label="Lihat Table" {...a11yProps(0)} />
@@ -177,7 +177,7 @@ const Provinsi = () => {
       <TabPanel value={value} index={1}>
         <ProvinsiChart dataProvinsi={dataProvinsi} />
       </TabPanel>
-    </Fragment>
+    </div>
   );
 };
 

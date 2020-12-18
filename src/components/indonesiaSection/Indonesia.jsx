@@ -153,7 +153,9 @@ const Indonesia = () => {
   return (
     <div className="Root">
       <Typography variant="h4" gutterBottom>Indonesia Data</Typography>
+      <Typography variant="h6" gutterBottom>Total</Typography>
       <DataTotal dataTotal={dataTotal} />
+      <Typography variant="h6" style={{marginTop: 16}} gutterBottom>Harian</Typography>
       <DataPenambahan dataPenambahan={dataPenambahan} />
     </div>
   );
