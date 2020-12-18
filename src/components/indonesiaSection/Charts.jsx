@@ -7,7 +7,7 @@ import { Autocomplete } from '@material-ui/lab';
 import { getIndonesiaHarian } from '../../api';
 import Loading from '../Loading';
 
-export const DailyData = () => {
+export const DailyChartID = () => {
   const [dataHarian, setDataHarian] = useState([]);
 
   useEffect(() => {

@@ -5,7 +5,7 @@ import { BrowserRouter as Router,  Route, Switch} from 'react-router-dom';
 
 import Global from './components/Global';
 import Countries from './components/Countries';
-import { Indonesia, Provinsi, DailyData } from './components/indonesiaSection';
+import { Indonesia, Provinsi, DailyChartID } from './components/indonesiaSection';
 import Clock from './components/Clock';
 import Navs from './components/Navs';
 import AboutUs from './components/aboutUs/AboutUs';
@@ -47,7 +47,7 @@ function App() {
                       <Divider />
                       <Provinsi />
                       <Divider />
-                      <DailyData />
+                      <DailyChartID />
                     </>
                   )
                 }}/>

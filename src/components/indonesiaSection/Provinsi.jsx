@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles, makeStyles, Paper, Box, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Tabs, Tab, Typography } from '@material-ui/core';
 
 import { getIndonesiaProvinsi } from '../../api';
+import { formatNumber }  from '../../formatNumber';
 import { ProvinsiChart } from './Charts';
 import Loading from '../Loading';
 
@@ -107,16 +108,16 @@ const Provinsi = () => {
                       {row.provinsi}
                     </TableCell>
                     <TableCell align="right">
-                      {row.kasus}
+                      {formatNumber(row.kasus)}
                     </TableCell>
                     <TableCell align="right">
-                      {row.dirawat}
+                      {formatNumber(row.dirawat)}
                     </TableCell>
                     <TableCell align="right">
-                      {row.sembuh}
+                      {formatNumber(row.sembuh)}
                     </TableCell>
                     <TableCell align="right">
-                      {row.meninggal}
+                      {formatNumber(row.meninggal)}
                     </TableCell>
                   </TableRow>
                 );
