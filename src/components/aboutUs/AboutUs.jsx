@@ -12,7 +12,7 @@ const AboutUs = () => {
         <Typography variant="subtitle1">{props.nama}</Typography>
         <Typography variant="subtitle1" gutterBottom>{props.nim}</Typography>
         <Typography>
-          <a href={props.akun}>
+          <a href={props.akun} target="_blank" rel="noreferrer">
             <i><GitHubIcon className="gitIcon" /></i>
           </a>
         </Typography>
@@ -21,8 +21,10 @@ const AboutUs = () => {
   }
   
   return (
+    <div className="About-Us">
       <div className="Root">
           <Typography variant="h2" gutterBottom>Kelompok Jeruk</Typography>
+          <Typography variant="h6" gutterBottom>IF300-C/CL</Typography>
           <Divider />
           <Grid container spacing={2}>
             <Grid item sm={3} xs={12}>
@@ -59,6 +61,7 @@ const AboutUs = () => {
             </Grid>
           </Grid>
       </div>
+    </div>
   )
 }
 

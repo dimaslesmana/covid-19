@@ -51,3 +51,9 @@
 #photoProfil4 {
     background-image: url(./images/00000040027.jpg);
 }
+
+@media only screen and (min-width: 600px) {
+    .About-Us {
+        min-height: 100vh;
+    }
+}
