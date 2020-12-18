@@ -2,6 +2,7 @@
     margin: 18px 0 24px 0;
 }
 
+/*** CARD ***/
 .Card {
     margin: 0 0 8px 0;
 }
@@ -16,4 +17,12 @@
 
 .Deaths-Card {
     background-color: #DC143C;
+}
+
+/*** FOOTER ***/
+.Footer {
+    color: white;
+    background-color: rgb(44, 44, 175);
+    padding: 3px;
+    text-align: center;
 }

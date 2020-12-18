@@ -19,7 +19,7 @@
     background-clip: padding-box;
     background-size: cover;
     background-position: center center;
-    margin: 12px auto 18px auto;
+    margin: 32px auto 18px auto;
     box-shadow: 1px 1px 20px 1px rgb(88, 200, 245);
 }
 
@@ -37,11 +37,11 @@
 }
 
 #photoProfil1 {
-    background-image: url(./image/00000038106.jpg);
+    background-image: url(./images/00000038106.jpg);
 }
 
 #photoProfil2 {
-    background-image: url(https://placeimg.com/640/480/tech);
+    background-image: url(./images/00000041281.png);
 }
 
 #photoProfil3 {

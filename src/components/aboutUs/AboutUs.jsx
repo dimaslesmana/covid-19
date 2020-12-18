@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, Divider } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import './AboutUs.css';
@@ -22,15 +22,13 @@ const AboutUs = () => {
   
   return (
       <div className="Root">
-          <Typography variant="h4" gutterBottom>About Us</Typography>
-          <div id="logo" className="logo"></div>
-          <Typography variant="h6">Kelompok Jeruk</Typography>
-          <Typography variant="h6">Kelas: IF300-C/CL</Typography>
+          <Typography variant="h2" gutterBottom>Kelompok Jeruk</Typography>
+          <Divider />
           <Grid container spacing={2}>
             <Grid item sm={3} xs={12}>
               <About 
                 image="photoProfil1"
-                nama="Christian Siagian"
+                nama="Christian Andreas Siagian"
                 nim="00000038106"
                 akun="https://github.com/christiansiagiann"
               />
