@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { AppBar, Toolbar, Switch, Typography, Button } from '@material-ui/core';
+import {Button} from '@material-ui/core';
 
 function Footer() {
   return (
